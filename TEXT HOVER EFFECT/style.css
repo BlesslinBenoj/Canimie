@@ -1,0 +1,75 @@
+@import url('https://fonts.googleapis.com/css2?family=Almarai:wght@800&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+#box{
+    display: flex;
+    position:absolute;
+    top: 263px;
+    left:35vw;
+
+}
+
+
+#me{
+    display: flex;
+    margin-left: 25px;
+
+}
+
+.alpha{
+    color: red;
+    font-size: 77px;
+    font-family: 'Almarai',sans-serif;
+    margin: 4px;
+}
+
+.alpha.animated{
+    color: cyan;
+    animation: ani 0.7s ease-in-out 1;
+
+}
+
+@keyframes ani {
+    0%{
+        transform: scale(1.2,0.5);
+    }
+    16%{
+        transform: scale(1.2,0.5);
+    }
+    25%{
+        transform: scale(1.2,0.5);
+    }
+    32%{
+        transform: scale(0.8,1.1);
+    }
+    48%{
+        transform: scale(0.95,1);
+    }
+    64%{
+        transform: scale(0.8,1.2);
+    }
+    80%{
+        transform: scale(1.15,1);
+    }
+    87%{
+        transform: scale(1.15,1);
+    }
+    90%{
+        /* this will add the shaking effect one time almost at the end*/
+        transform: scale(0.8,1);
+    }
+    95%{
+        transform: scale(1.05,1);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+
+}
