@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>timeline animation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <img src="stars.png" id="stars">
+        <img src="moon.png" id="moon">
+        <img src="mountains_behind.png" id="mountains_behind">
+        <h2 id="text">Anime<span>JS</span></h2>
+        <a href="#" id="btn">Play</a>
+        <img src="mountains_front.png" id="mountains_front">
+
+    </section>
+
+
+    <script src="anime.min.js"></script>
+    <script>
+        var animation = anime.timeline({
+          autoplay: false
+        });
+
+        animation
+        .add({
+            targets: '#btn',
+            top: '1500px',
+            duration: 500,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#stars',
+            top: '0px',
+            duration: 1000,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#mountains_behind',
+            bottom: '0px',
+            duration: 1000,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#moon',
+            top: '0px',
+            duration: 1000,
+            easing: 'easeInOutBack'
+        })
+
+        .add({
+            targets: '#mountains_front',
+            bottom: '0px',
+            duration: 1000,
+            easing: 'easeInOutSine'
+        })
+
+        .add({
+            targets: '#text',
+            marginRight: 0,
+            duration: 1000,
+            easing: 'easeInOutBack'
+        })
+
+        .add({
+            targets: '#btn',
+            top: '50%',
+            duration: 1000,
+            easing: 'easeInOutBack'
+        })
+
+        document.querySelector('#btn').onclick = animation.play;
+
+
+    </script>
+    
+</body>
+</html>
