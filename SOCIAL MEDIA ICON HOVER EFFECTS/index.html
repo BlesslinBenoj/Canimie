@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3d social media icon hover effects</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" integrity="sha512-5A8nwdMOWrSz20fDsjczgUidUBR8liPYU+WymTZP1lmY9G6Oc7HlZv156XqnsgNUzTyMefFTcsFH/tnJE/+xBg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <section class="socialMedia">
+        <ul class="sci">
+            <li data-text="Facebook" data-color="#1877f2">
+                <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+            </li>
+            <li data-text="Youtube" data-color="#ff0000">
+                <a href="#" class="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+            </li>
+            <li data-text="Telegram" data-color="#1874cd">
+                <a href="#" class="telegram"><i class="fa fa-telegram" aria-hidden="true"></i></a>
+            </li>
+            <li data-text="LinkedIn" data-color="#00bfff">
+                <a href="#" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a>
+            </li>
+
+        </ul>
+    </section>
+    <script src="vanilla-tilt.min.js"></script>
+
+    <script>
+
+        VanillaTilt.init(document.querySelectorAll(".sci li a"), {
+		    max: 35,
+		    speed: 400,
+            glare: true,
+            "max-glare": 1,
+	      });
+
+
+
+
+
+        let list = document.querySelectorAll('.sci li');
+        let bg = document.querySelector('.socialMedia');
+        list.forEach(elements =>{
+            elements.addEventListener('mouseenter',function
+            (event){
+                let color = event.target.getAttribute
+                ('data-color');
+                bg.style.backgroundColor = color;
+            })
+            elements.addEventListener('mouseleave',function
+            (event){
+                bg.style.backgroundColor = '#fff';
+            })
+
+           
+        })
+
+
+    </script>
+    
+</body>
+</html>
